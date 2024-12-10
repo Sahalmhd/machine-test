@@ -39,7 +39,7 @@
                     <a class="nav-link" href="{{ route('categories.index') }}">Manage Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('tags.create') }}">Manage Tags</a>
+                    <a class="nav-link" href="{{ route('tags.index') }}">Manage Tags</a>
                 </li>
             </ul>
         </div>

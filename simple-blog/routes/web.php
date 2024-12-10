@@ -22,14 +22,9 @@ Route::get('/articles/{id}/edit', [ArticleController::class, 'editArticle'])->na
 Route::put('/articles/{id}', [ArticleController::class, 'updateArticle'])->name('articles.update');
 Route::delete('/articles/{id}', [ArticleController::class, 'deleteArticle'])->name('articles.destroy');
 
-// Category Routes
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
-Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
-Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
-Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
-Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
-Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
-// Tag Routes
-Route::get('/tags/create', [TagController::class, 'create'])->name('tags.create');
-Route::post('/tags', [TagController::class, 'store'])->name('tags.store');
+Route::resource('categories', CategoryController::class);
+
+
+Route::resource('tags', TagController::class);
+
